@@ -182,3 +182,83 @@ setCustomClaims({ type: 'Hawker' })
       }
     });
   }
+
+
+
+  // display database
+function displayCenters() {
+  var centersContainer = document.getElementById('centers-container');
+  centersContainer.innerHTML = '';
+
+  db.collection('centers').get().then(function(querySnapshot) {
+    querySnapshot.forEach(function(doc) {
+      var centerData = doc.data();
+      var centerId = doc.id;
+
+      var centerElement = document.createElement('div');
+      centerElement.className = 'center-item';
+
+      var centerNameElement = document.createElement('h3');
+      centerNameElement.textContent = centerData.name;
+      centerElement.appendChild(centerNameElement);
+
+      var centerCodeElement = document.createElement('p');
+      centerCodeElement.textContent = 'Code: ' + centerData.code;
+      centerElement.appendChild(centerCodeElement);
+
+      var centerRegionElement = document.createElement('p');
+      centerRegionElement.textContent = 'Region: ' + centerData.region;
+      centerElement.appendChild(centerRegionElement);
+
+      // delete
+      var deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.addEventListener('click', function() {
+        deleteCenter(centerId);
+      });
+      centerElement.appendChild(deleteButton);
+
+      centersContainer.appendChild(centerElement);
+    });
+  });
+}
+
+// create new 
+function createCenter() {
+  var centerName = prompt('Enter center name:');
+  var centerCode = prompt('Enter center code:');
+
+
+  // add to db
+  db.collection('centers').add({
+    name: centerName,
+    code: centerCode,
+
+  })
+  .then(function(docRef) {
+    console.log('Center added: ', docRef.id);
+    displayCenters();
+  })
+  .catch(function(error) {
+    console.error('Error:', error);
+  });
+}
+
+// del
+function deleteCenter(centerId) {
+  db.collection('centers').doc(centerId).delete()
+    .then(function() {
+      console.log('Center deleted:', centerId);
+      displayCenters();
+    })
+    .catch(function(error) {
+      console.error('Error:', error);
+    });
+}
+
+
+window.onload = function() {
+  if (window.location.pathname == '/admin.html') {
+    displayCenters();
+  }
+};
