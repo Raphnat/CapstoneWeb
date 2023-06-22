@@ -1,27 +1,52 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+// Import the functions you need from the SDKs you nee
 // TODO: Add SDKs for Firebase products that you want to use
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js'
+import { } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js'
+
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCuSzs-m6ToSKy5M7RGPT6-whsmajo0iKg",
   authDomain: "soshiok-ip2023.firebaseapp.com",
+  databaseURL: "https://soshiok-ip2023-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "soshiok-ip2023",
   storageBucket: "soshiok-ip2023.appspot.com",
   messagingSenderId: "431465307758",
   appId: "1:431465307758:web:bb5b2cf610e7facd1a507f"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
 //AUTHENTICATION STUFF
 // Initialize Firebase
-const app = initializeApp(firebaseConfig); 
+
+let signupBtn = document.getElementById("signupBtn");
+let signinBtn = document.getElementById("signinBtn");
+let title = document.getElementById("title");
+
+function signinButton() {
+    nameField.style.maxHeight = "0";
+    title.innerHTML = "Sign In";
+    signupBtn.classList.add("disable");
+    signibnBtn.classList.remove("disable");
+}
+function signupButton() {
+    nameField.style.maxHeight = "60px";
+    title.innerHTML = "Sign Up";
+    signibnBtn.classList.remove("disable");
+    signinBtn.classList.add("disable");
+}
 
 function signUp(username, email, password,cfmPassword, hawkerCode) {
+   signupButton()
     if (password !== cfmPassword) {
         console.error(`Passwords do not match`);
         return;
       } 
+      
 
       // additional: how to ensure hawker code is legit?
       firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -57,6 +82,7 @@ function signUp(username, email, password,cfmPassword, hawkerCode) {
       });
   }
   function logIn(email, password) {
+    signinButton()
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
         
@@ -184,9 +210,10 @@ setCustomClaims({ type: 'Hawker' })
   }
 
 
-
+  var db = firebase.database().ref();
   // display database
 function displayCenters() {
+
   var centersContainer = document.getElementById('centers-container');
   centersContainer.innerHTML = '';
 
@@ -225,18 +252,29 @@ function displayCenters() {
 
 // create new 
 function createCenter() {
-  var centerName = prompt('Enter center name:');
-  var centerCode = prompt('Enter center code:');
 
+  var centerName = document.getElementById('center-name').value;
+  var centerCode = document.getElementById('center-code').value;
+  var stallList = document.getElementById('stall-list').value;
+  var stalls = stallList.split(',');
 
   // add to db
-  db.collection('centers').add({
-    name: centerName,
-    code: centerCode,
-
+  db.ref('hawker centers/' + centerCode).set({
+    'hawker code': centerCode,
+    'hawker name': centerName
   })
-  .then(function(docRef) {
-    console.log('Center added: ', docRef.id);
+  .then(function() {
+    console.log('Center added');
+    var centerRef = db.collection('hawker centers').doc(centerCode);
+    var batch = db.batch();
+    stalls.forEach(function(stallName) {
+      var stallDocRef = centerRef.collection('stalls').doc();
+      batch.set(stallDocRef, { name: stallName });
+    });
+    return batch.commit();
+  })
+  .then(function() {
+    console.log('Stalls added');
     displayCenters();
   })
   .catch(function(error) {
@@ -260,5 +298,16 @@ function deleteCenter(centerId) {
 window.onload = function() {
   if (window.location.pathname == '/admin.html') {
     displayCenters();
+    let btnc = document.getElementsByID("addbuttontest");
+    btnc.onclick = createCenter();
   }
 };
+
+
+// running the functions
+signinBtn.onclick = function(){
+  let email1 = document.getElementById("emailLogIn");
+  let password1 = document.getElementById("passwordLogIn");
+  logIn(email1.value, password1.value);
+}
+// getting details

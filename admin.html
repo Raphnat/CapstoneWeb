@@ -2,12 +2,21 @@
 <html>
 <head>
   <title>admin</title>
+  
+  <script type ="module" src="firebaseAuth.js"></script>
+  <script src="script.js"></script>
+
 </head>
 <body>
   <h1>Manage Centers</h1>
+  <div>
+    <input type="text" id="center-name" placeholder="name">
+    <input type="text" id="center-code" placeholder="code">
+    <input type="text" id="stall-list" placeholder="stalls">
+    <button id="addbuttontest">add</button>
+  </div>
   <div id="centers-container"></div>
+  
 
-  <script src="firebaseAuth.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
