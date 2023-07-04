@@ -24,19 +24,28 @@
             <div class="profile-card">
                 <div class="profile-img" style="background-image: url(img/annette.jpg);"></div>
                 <div class="profile-info">
-                    <h2>Annette Toh</h2>
-                    <small>CEO of Strait Sides</small>
+                    <h2>Chowder Chen</h2>
+                    <small>Owner</small>
                 </div>
                 <div class="profile-action">
                     <a href="" class="btn btn-white">
                         <span class="las la-coins"></span> $2,500
                     </a>
                 </div>
-                <div class="profile-icons">
-                    <span class="las la-user"></span>
+               <div class="profile-icons">
+                   <!-- <span class="las la-user"></span>
+                    
                     <span class="las la-comment-alt"></span>
-                    <span class="las la-file-invoice"></span>
+                    <span class="las la-file-invoice"></span>-->
+                    <span></span>
                 </div>
+            </div>
+            <div class="sidebar-card">
+                <h3>New Order</h3>
+                <h4>Steamed Chicken Rice</h4>
+                <p>1</p>
+                <a href="" class="btn btn-block btn-white">Accept</a>
+                <a href="" class="btn btn-block btn-white">Reject</a>
             </div>
             <div class="sidebar-menu">
                 <div class="menu-item">
@@ -48,25 +57,13 @@
                 <div class="menu-item">
                     <a href="">
                         <span class="las la-project-diagram"></span>
-                        <span>Projects</span>
+                        <span>Analytics</span>
                     </a>
                 </div>
                 <div class="menu-item">
                     <a href="">
                         <span class="las la-tasks"></span>
-                        <span>Tasks</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="">
-                        <span class="las la-columns"></span>
-                        <span>Kanban</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="">
-                        <span class="las la-users-cog"></span>
-                        <span>Users</span>
+                        <span>Menu</span>
                     </a>
                 </div>
                 <div class="menu-item">
@@ -78,22 +75,12 @@
                 <div class="menu-item">
                     <a href="">
                         <span class="las la-file-invoice"></span>
-                        <span>Inovices</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="">
-                        <span class="las la-cogs"></span>
-                        <span>Widgets</span>
+                        <span>Order History</span>
                     </a>
                 </div>
             </div>
 
-            <div class="sidebar-card">
-                <h3>Hello Annette</h3>
-                <p>You are yet to complete certain tasks that are assigned to you and haven't update the product manager of your current status quo</p>
-                <a href="" class="btn btn-block btn-white">Get started</a>
-            </div>
+
         </div>
 
         <div class="main-content">
@@ -102,18 +89,18 @@
                     <span class="las la-bars"></span>
                 </label>
                 <div class="head-icons">
-                    <span class="las la-search"></span>
+                   <!-- <span class="las la-search"></span>
                     <span class="las la-comment-alt"></span>
                     <span class="las la-bell"></span>
                     <div class="head-avatar">
                         <div class="avatar" style="background-image: url(img/aaron.jpg)"></div>
                         <span>Aaron Chin</span>
-                    </div>
+                    </div>-->
                 </div>
             </header>
             <main>
                 <div class="page-header">
-                    <h1>Morning Annette Toh</h1>
+                    <h1>Morning, Chowder Chen</h1>
                     <small>Have a nice day</small>
                 </div>
                 <div class="analytics">
@@ -131,7 +118,7 @@
                     </div>
                     <div class="card emails-card">
                         <div class="card-head">
-                            Emails sent
+                            Orders Fulfilled
                         </div>
                         <div class="card-body">
                             <div id="emailChart"> </div>
@@ -140,23 +127,19 @@
                             <div class="emails-info">
                                 <div class="emails-stat">
                                     <span class="status bg-danger"></span>
-                                    <span>30 not sent</span>
+                                    <span>5 Rejected</span>
                                 </div>
 
                                 <div class="emails-stat">
                                     <span class="status bg-warning"></span>
-                                    <span>38 opened</span>
+                                    <span>3 In Progress</span>
                                 </div>
 
                                 <div class="emails-stat">
                                     <span class="status bg-success"></span>
-                                    <span>68 success</span>
+                                    <span>8 Fulfilled</span>
                                 </div>
 
-                                <div class="emails-stat">
-                                    <span class="status bg-danger"></span>
-                                    <span>SMTP error</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -166,12 +149,12 @@
                         <div class="card-head">
                             <div class="team-head">
                                 <div>
-                                    <h3>Team Progress</h3>
-                                    <small>890, 344 sales</small>
+                                    <h3>Current Orders</h3>
+                                    <small>3 Ongoing</small>
                                 </div>
-                                <select name="" id="">
+                                <!--<select name="" id="">
                                     <option value="">User</option>
-                                </select>
+                                </select>-->
                             </div>
                         </div>
                         <div class="card-body">
@@ -179,9 +162,8 @@
                                 <thead>
                                     <tr>
 
-                                        <th>Author</th>
-                                        <th>Company</th>
-                                        <th>Progress</th>
+                                        <th>Order</th>
+                                        <th>Order ID</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -190,22 +172,22 @@
 
                                         <td>
                                             <div class="team-info">
-                                                <div class="team-img">
-                                                    <img src="img/raphael.jpg" alt="" height="50" width="40">
-                                                </div>
+
                                                 <div class="team-details">
-                                                    <h4>Raphael Tan</h4>
-                                                    <small>Unity</small>
+                                                    <h4>Steamed Chicken Rice</h4>
+                                                    <small>1</small>
+                                                    <h4>Roasted Chicken Rice</h4>
+                                                    <small>2</small>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="company-info">
-                                                <h4>Strait Sides</h4>
-                                                <small>Online Hawker Stall Game</small>
+                                                <h4>#0852837</h4>
+                                                <small>Made at 1035</small>
                                             </div>
                                         </td>
-                                        <td>
+                                       <!-- <td>
                                             <div class="team-progress">
                                                 <h4>75%</h4>
                                                 <div class="progress-bar">
@@ -213,30 +195,30 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </td>
+                                        </td>-->
                                         <td>
-                                            <a href="" class="btn btn-main">View</a> </td>
+                                            <a href="" class="btn btn-main">Reject</a> 
+                                            <a href="" class="btn btn-main">Serve</a> 
+                                        </td>
                                     </tr>
                                     <tr>
 
                                         <td>
                                             <div class="team-info">
-                                                <div class="team-img">
-                                                    <img src="img/annette.jpg" alt="" height="50" width="40">
-                                                </div>
+
                                                 <div class="team-details">
-                                                    <h4>Annette Toh</h4>
-                                                    <small>CEO of Strait Sides</small>
+                                                    <h4>Steamed set for 2</h4>
+                                                    <small>1</small>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="company-info">
-                                                <h4>Strait Sides</h4>
-                                                <small>Online Hawker Stall Game</small>
+                                                <h4>#9826351</h4>
+                                                <small>Made at 1015</small>
                                             </div>
                                         </td>
-                                        <td>
+                                       <!-- <td>
                                             <div class="team-progress">
                                                 <h4>65%</h4>
                                                 <div class="progress-bar">
@@ -244,44 +226,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </td>
+                                        </td>-->
                                         <td>
-                                            <a href="" class="btn btn-main">View</a> </td>
+                                            <a href="" class="btn btn-main">Reject</a> 
+                                            <a href="" class="btn btn-main">Serve</a> 
                                     </tr>
 
-                                    <tr>
-
-                                        <td>
-                                            <div class="team-info">
-                                                <div class="team-img">
-                                                    <img src="img/aaron.jpg" alt="" height="50" width="40">
-                                                </div>
-                                                <div class="team-details">
-                                                    <h4>Aaron Chin</h4>
-                                                    <small>HTML, CSS, JS, Social Media</small>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="company-info">
-                                                <h4>Strait Sides</h4>
-                                                <small>Online Hawker Stall Game</small>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="team-progress">
-                                                <h4>45%</h4>
-                                                <div class="progress-bar">
-                                                    <div class="indicator warning" style="width: 45%">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-
-
-                                        <td>
-                                            <a href="" class="btn btn-main">View</a> </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -290,8 +240,8 @@
                     <div class="card competitors">
                         <div class="card-head">
                             <div class="team-head">
-                                <h4>Our Game</h4>
-                                <small>More than 400+ new users</small>
+                                <h4>Best Sellers</h4>
+                                <small>Over the period of 3 years</small>
 
                             </div>
                         </div>
@@ -300,14 +250,12 @@
                                 <div>
                                     <img src="img/game pic.jpg" alt="" height="100" width="200">
                                     <div class="compete-details">
-                                        <h4>Kitchen of the Hawker Stall</h4>
-                                        <small>Study highway types</small>
-                                        <p>By: <a href="">Code Resource</a></p>
+                                        <h4>Steamed Chicken Rice</h4>
                                     </div>
 
                                 </div>
                                 <div class="compete-sales">
-                                    <h3>24,900</h3>
+                                    <h3>24,500</h3>
                                     <span>Sales</span>
                                 </div>
                             </div>
@@ -315,9 +263,7 @@
                                 <div>
                                     <img src="img/game pic.jpg" alt="" height="100" width="200">
                                     <div class="compete-details">
-                                        <h4>Cup & Green</h4>
-                                        <small>Study highway types</small>
-                                        <p>By: <a href="">Code Resource</a></p>
+                                        <h4>Roasted Chicken Rice</h4>
                                     </div>
                                 </div>
                                 <div class="compete-sales">
@@ -329,13 +275,11 @@
                                 <div>
                                     <img src="img/game pic.jpg" alt="" height="100" width="200">
                                     <div class="compete-details">
-                                        <h4>Cup & Green</h4>
-                                        <small>Study highway types</small>
-                                        <p>By: <a href="">Code Resource</a></p>
+                                        <h4>Steamed set for 2</h4>
                                     </div>
                                 </div>
                                 <div class="compete-sales">
-                                    <h3>24,900</h3>
+                                    <h3>24,100</h3>
                                     <span>Sales</span>
                                 </div>
                             </div>
