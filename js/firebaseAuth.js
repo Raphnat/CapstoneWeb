@@ -6,22 +6,14 @@ import { } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js'
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyCuSzs-m6ToSKy5M7RGPT6-whsmajo0iKg",
-  authDomain: "soshiok-ip2023.firebaseapp.com",
-  databaseURL: "https://soshiok-ip2023-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "soshiok-ip2023",
-  storageBucket: "soshiok-ip2023.appspot.com",
-  messagingSenderId: "431465307758",
-  appId: "1:431465307758:web:bb5b2cf610e7facd1a507f"
-};
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 //AUTHENTICATION STUFF
 // Initialize Firebase
+var db = firebase.database().ref();
 
 let signupBtn = document.getElementById("signupBtn");
 let signinBtn = document.getElementById("signinBtn");
@@ -210,8 +202,8 @@ setCustomClaims({ type: 'Hawker' })
   }
 
 
-  var db = firebase.database().ref();
-  // display database
+  
+// display database
 function displayCenters() {
 
   var centersContainer = document.getElementById('centers-container');
