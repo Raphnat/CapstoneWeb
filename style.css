@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/cs2?family-Nunito:wght@200;300;400;600;700&display=swap');
 :root {
-    --color-main: #781af3;
-    --color-secondary: #FFB100;
-    --bg-body: #f8d8fb;
-    --main-accent: #6307e2;
-    --main-text: #8492a6;
+    --color-main: #B1C7A5;
+    --color-secondary: #FFF6CB;
+    --bg-body: #FFC28A;
+    --main-accent: #DB2929;
+    --main-text: #520707;
     --success: #28A745;
     --danger: #dc3545;
     --shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
@@ -23,6 +23,23 @@ body {
     color: var(--main-text);
     background: var(--bg-body);
     overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 2fr 2fr;
+    column-gap: 5px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.text {
+    font-size: 30px;
 }
 
 #menu-toggle {
@@ -74,7 +91,7 @@ body {
 
 .brand h3 {
     font-size: 1.8rem;
-    color: #FFf;
+    color: var(--main-text);
 }
 
 .profile-card {
@@ -83,18 +100,18 @@ body {
 }
 
 .profile-img {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
+    height: 220px;
+    width: 180px;
+    border-radius: 80%;
     margin: auto;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 1.8rem;
-    margin-bottom: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .profile-info {
-    color: #fff;
+    color: var(--main-text);
     margin-bottom: 1rem;
 }
 
@@ -104,7 +121,7 @@ body {
 
 .profile-info small {
     font-size: 1rem;
-    color: #efefef;
+    color: var(--main-text);
 }
 
 .profile-action {
@@ -122,13 +139,13 @@ body {
 
 .btn-white {
     background: #fff;
-    margin:3%;
+    margin: 3%;
 }
 
 .btn-main {
     color: #fff;
     background: var(--color-main);
-    margin:3%;
+    margin: 3%;
 }
 
 .btn span {
@@ -188,7 +205,7 @@ body {
     border-radius: 10px;
     background: var(--color-secondary);
     margin: 2rem 0rem;
-    color: #fff;
+    color: var(--main-text);
 }
 
 .sidebar-card h3 {
@@ -264,7 +281,7 @@ header label {
 }
 
 .page-header {
-    color: #fff;
+    color: var(--main-text);
     margin: 1rem 0rem;
 }
 

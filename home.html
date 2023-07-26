@@ -13,181 +13,189 @@
 </head>
 
 <body>
+
+
     <div class="page-wrapper">
+
         <input type="checkbox" name="" id="menu-toggle">
         <div class="sidebar">
             <div class="brand">
                 <h3>
-                    <span class="lab la-untappd"></span> Strait Sides
+                    <div class="container">
+                        <div class="image">
+                            <img src="img/companylogo.jpg">
+                        </div>
+                        <div class="text"> Strait Sides</div>
                 </h3>
-            </div>
-            <div class="profile-card">
-                <div class="profile-img" style="background-image: url(img/annette.jpg);"></div>
-                <div class="profile-info">
-                    <h2>Chowder Chen</h2>
-                    <small>Owner</small>
                 </div>
-                <div class="profile-action">
-                    <a href="" class="btn btn-white">
-                        <span class="las la-coins"></span> $2,500
-                    </a>
-                </div>
-               <div class="profile-icons">
-                   <!-- <span class="las la-user"></span>
+
+                <div class="profile-card">
+                    <div class="profile-img" style="background-image: url(img/charles.jpg);"></div>
+                    <div class="profile-info">
+                        <h2>Chowder Chen</h2>
+                        <small>Owner</small>
+                    </div>
+                    <div class="profile-action">
+                        <a href="" class="btn btn-white">
+                            <span class="las la-coins"></span> $2,500
+                        </a>
+                    </div>
+                    <div class="profile-icons">
+                        <!-- <span class="las la-user"></span>
                     
                     <span class="las la-comment-alt"></span>
                     <span class="las la-file-invoice"></span>-->
-                    <span></span>
+                        <span></span>
+                    </div>
                 </div>
-            </div>
-            <div class="sidebar-card">
-                <h3>New Order</h3>
-                <h4>Steamed Chicken Rice</h4>
-                <p>1</p>
-                <a href="" class="btn btn-block btn-white">Accept</a>
-                <a href="" class="btn btn-block btn-white">Reject</a>
-            </div>
-            <div class="sidebar-menu">
-                <div class="menu-item">
-                    <a href="" class="active">
-                        <span class="las la-home"></span>
-                        <span>Home</span>
-                    </a>
+                <div class="sidebar-card">
+                    <h3>New Order</h3>
+                    <h4>Steamed Chicken Rice</h4>
+                    <p>1</p>
+                    <a href="" class="btn btn-block btn-white">Accept</a>
+                    <a href="" class="btn btn-block btn-white">Reject</a>
                 </div>
-                <div class="menu-item">
-                    <a href="">
-                        <span class="las la-project-diagram"></span>
-                        <span>Analytics</span>
-                    </a>
+                <div class="sidebar-menu">
+                    <div class="menu-item">
+                        <a href="" class="active">
+                            <span class="las la-home"></span>
+                            <span>Home</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="">
+                            <span class="las la-project-diagram"></span>
+                            <span>Analytics</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="">
+                            <span class="las la-tasks"></span>
+                            <span>Menu</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="">
+                            <span class="las la-user-ninja"></span>
+                            <span>Profile</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="">
+                            <span class="las la-file-invoice"></span>
+                            <span>Order History</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="menu-item">
-                    <a href="">
-                        <span class="las la-tasks"></span>
-                        <span>Menu</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="">
-                        <span class="las la-user-ninja"></span>
-                        <span>Profile</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="">
-                        <span class="las la-file-invoice"></span>
-                        <span>Order History</span>
-                    </a>
-                </div>
-            </div>
 
 
-        </div>
+            </div>
 
-        <div class="main-content">
-            <header>
-                <label for="menu-toggle">
+            <div class="main-content">
+                <header>
+                    <label for="menu-toggle">
                     <span class="las la-bars"></span>
                 </label>
-                <div class="head-icons">
-                   <!-- <span class="las la-search"></span>
+                    <div class="head-icons">
+                        <!-- <span class="las la-search"></span>
                     <span class="las la-comment-alt"></span>
                     <span class="las la-bell"></span>
                     <div class="head-avatar">
                         <div class="avatar" style="background-image: url(img/aaron.jpg)"></div>
                         <span>Aaron Chin</span>
                     </div>-->
-                </div>
-            </header>
-            <main>
-                <div class="page-header">
-                    <h1>Morning, Chowder Chen</h1>
-                    <small>Have a nice day</small>
-                </div>
-                <div class="analytics">
-                    <div class="card engage-card">
-                        <div class="card-head">
-                            Sales for the Week
+                    </div>
+                </header>
+                <main>
+                    <div class="page-header">
+                        <h1>Morning, Chowder Chen</h1>
+                        <small>Have a nice day</small>
+                    </div>
+                    <div class="analytics">
+                        <div class="card engage-card">
+                            <div class="card-head">
+                                Sales for the Week
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-wrapper">
+                                    <div id="chart">
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <div class="chart-wrapper">
-                                <div id="chart">
+                        <div class="card emails-card">
+                            <div class="card-head">
+                                Orders Fulfilled
+                            </div>
+                            <div class="card-body">
+                                <div id="emailChart"> </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="emails-info">
+                                    <div class="emails-stat">
+                                        <span class="status bg-danger"></span>
+                                        <span>5 Rejected</span>
+                                    </div>
+
+                                    <div class="emails-stat">
+                                        <span class="status bg-warning"></span>
+                                        <span>3 In Progress</span>
+                                    </div>
+
+                                    <div class="emails-stat">
+                                        <span class="status bg-success"></span>
+                                        <span>8 Fulfilled</span>
+                                    </div>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card emails-card">
-                        <div class="card-head">
-                            Orders Fulfilled
-                        </div>
-                        <div class="card-body">
-                            <div id="emailChart"> </div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="emails-info">
-                                <div class="emails-stat">
-                                    <span class="status bg-danger"></span>
-                                    <span>5 Rejected</span>
-                                </div>
-
-                                <div class="emails-stat">
-                                    <span class="status bg-warning"></span>
-                                    <span>3 In Progress</span>
-                                </div>
-
-                                <div class="emails-stat">
-                                    <span class="status bg-success"></span>
-                                    <span>8 Fulfilled</span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-2">
-                    <div class="card team-progress">
-                        <div class="card-head">
-                            <div class="team-head">
-                                <div>
-                                    <h3>Current Orders</h3>
-                                    <small>3 Ongoing</small>
-                                </div>
-                                <!--<select name="" id="">
+                    <div class="grid-2">
+                        <div class="card team-progress">
+                            <div class="card-head">
+                                <div class="team-head">
+                                    <div>
+                                        <h3>Current Orders</h3>
+                                        <small>3 Ongoing</small>
+                                    </div>
+                                    <!--<select name="" id="">
                                     <option value="">User</option>
                                 </select>-->
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <table>
-                                <thead>
-                                    <tr>
+                            <div class="card-body">
+                                <table>
+                                    <thead>
+                                        <tr>
 
-                                        <th>Order</th>
-                                        <th>Order ID</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
+                                            <th>Order</th>
+                                            <th>Order ID</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
 
-                                        <td>
-                                            <div class="team-info">
+                                            <td>
+                                                <div class="team-info">
 
-                                                <div class="team-details">
-                                                    <h4>Steamed Chicken Rice</h4>
-                                                    <small>1</small>
-                                                    <h4>Roasted Chicken Rice</h4>
-                                                    <small>2</small>
+                                                    <div class="team-details">
+                                                        <h4>Steamed Chicken Rice</h4>
+                                                        <small>1</small>
+                                                        <h4>Roasted Chicken Rice</h4>
+                                                        <small>2</small>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="company-info">
-                                                <h4>#0852837</h4>
-                                                <small>Made at 1035</small>
-                                            </div>
-                                        </td>
-                                       <!-- <td>
+                                            </td>
+                                            <td>
+                                                <div class="company-info">
+                                                    <h4>#0852837</h4>
+                                                    <small>Made at 1035</small>
+                                                </div>
+                                            </td>
+                                            <!-- <td>
                                             <div class="team-progress">
                                                 <h4>75%</h4>
                                                 <div class="progress-bar">
@@ -196,29 +204,29 @@
                                                 </div>
                                             </div>
                                         </td>-->
-                                        <td>
-                                            <a href="" class="btn btn-main">Reject</a> 
-                                            <a href="" class="btn btn-main">Serve</a> 
-                                        </td>
-                                    </tr>
-                                    <tr>
+                                            <td>
+                                                <a href="" class="btn btn-main">Reject</a>
+                                                <a href="" class="btn btn-main">Serve</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
 
-                                        <td>
-                                            <div class="team-info">
+                                            <td>
+                                                <div class="team-info">
 
-                                                <div class="team-details">
-                                                    <h4>Steamed set for 2</h4>
-                                                    <small>1</small>
+                                                    <div class="team-details">
+                                                        <h4>Steamed set for 2</h4>
+                                                        <small>1</small>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="company-info">
-                                                <h4>#9826351</h4>
-                                                <small>Made at 1015</small>
-                                            </div>
-                                        </td>
-                                       <!-- <td>
+                                            </td>
+                                            <td>
+                                                <div class="company-info">
+                                                    <h4>#9826351</h4>
+                                                    <small>Made at 1015</small>
+                                                </div>
+                                            </td>
+                                            <!-- <td>
                                             <div class="team-progress">
                                                 <h4>65%</h4>
                                                 <div class="progress-bar">
@@ -227,144 +235,144 @@
                                                 </div>
                                             </div>
                                         </td>-->
-                                        <td>
-                                            <a href="" class="btn btn-main">Reject</a> 
-                                            <a href="" class="btn btn-main">Serve</a> 
-                                    </tr>
+                                            <td>
+                                                <a href="" class="btn btn-main">Reject</a>
+                                                <a href="" class="btn btn-main">Serve</a>
+                                        </tr>
 
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--My competitors column code-->
+                        <div class="card competitors">
+                            <div class="card-head">
+                                <div class="team-head">
+                                    <h4>Best Sellers</h4>
+                                    <small>Over the period of 3 years</small>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="compete-info">
+                                    <div>
+                                        <img src="img/game pic.jpg" alt="" height="100" width="200">
+                                        <div class="compete-details">
+                                            <h4>Steamed Chicken Rice</h4>
+                                        </div>
+
+                                    </div>
+                                    <div class="compete-sales">
+                                        <h3>24,500</h3>
+                                        <span>Sales</span>
+                                    </div>
+                                </div>
+                                <div class="compete-info">
+                                    <div>
+                                        <img src="img/game pic.jpg" alt="" height="100" width="200">
+                                        <div class="compete-details">
+                                            <h4>Roasted Chicken Rice</h4>
+                                        </div>
+                                    </div>
+                                    <div class="compete-sales">
+                                        <h3>24,900</h3>
+                                        <span>Sales</span>
+                                    </div>
+                                </div>
+                                <div class="compete-info">
+                                    <div>
+                                        <img src="img/game pic.jpg" alt="" height="100" width="200">
+                                        <div class="compete-details">
+                                            <h4>Steamed set for 2</h4>
+                                        </div>
+                                    </div>
+                                    <div class="compete-sales">
+                                        <h3>24,100</h3>
+                                        <span>Sales</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!--My competitors column code-->
-                    <div class="card competitors">
-                        <div class="card-head">
-                            <div class="team-head">
-                                <h4>Best Sellers</h4>
-                                <small>Over the period of 3 years</small>
-
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="compete-info">
-                                <div>
-                                    <img src="img/game pic.jpg" alt="" height="100" width="200">
-                                    <div class="compete-details">
-                                        <h4>Steamed Chicken Rice</h4>
-                                    </div>
-
-                                </div>
-                                <div class="compete-sales">
-                                    <h3>24,500</h3>
-                                    <span>Sales</span>
-                                </div>
-                            </div>
-                            <div class="compete-info">
-                                <div>
-                                    <img src="img/game pic.jpg" alt="" height="100" width="200">
-                                    <div class="compete-details">
-                                        <h4>Roasted Chicken Rice</h4>
-                                    </div>
-                                </div>
-                                <div class="compete-sales">
-                                    <h3>24,900</h3>
-                                    <span>Sales</span>
-                                </div>
-                            </div>
-                            <div class="compete-info">
-                                <div>
-                                    <img src="img/game pic.jpg" alt="" height="100" width="200">
-                                    <div class="compete-details">
-                                        <h4>Steamed set for 2</h4>
-                                    </div>
-                                </div>
-                                <div class="compete-sales">
-                                    <h3>24,100</h3>
-                                    <span>Sales</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
+                </main>
+            </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-    <script>
-        let options = {
-            chart: {
-                type: 'line',
-                height: "280px",
-                fontFamily: "Nunito",
-                toolbar: {
-                    show: false,
-                }
-            },
-            stroke: {
-                curve: "smooth",
-                width: 8,
-                colors: ["#6e00ff"],
-            },
-            markers: {
-                size: 7,
-                colors: ["#6e00ff"],
-            },
-            grid: {
-                strokeDashArray: 10,
-            },
-            series: [{
-                name: 'sales per day',
-                data: [42, 33, 54, 31, 59, 70, 61]
-            }],
-            xaxis: {
-                categories: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"]
-            }
-        }
-
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-        chart.render();
-
-        //Radial Bar Chart
-        let optionsRadial = {
-            series: [50],
-            chart: {
-                height: 280,
-                type: 'radialBar',
-            },
-            plotOptions: {
-                radialBar: {
-                    hollow: {
-                        size: '60%',
-                    },
-                    dataLabels: {
-                        name: {
-                            show: false,
-                        },
-                        value: {
-                            formatter: function(val) {
-                                return parseInt(val);
-                            },
-                            color: '#777',
-                            fontSize: '40px',
-                            fontWeight: 500,
-                        }
+        <script>
+            let options = {
+                chart: {
+                    type: 'line',
+                    height: "280px",
+                    fontFamily: "Nunito",
+                    toolbar: {
+                        show: false,
                     }
                 },
-            },
-            stroke: {
-                lineCap: "round",
-            },
-            fill: {
-                colors: ["#ffb100"]
-            },
-            labels: [""]
-        };
+                stroke: {
+                    curve: "smooth",
+                    width: 8,
+                    colors: ["#6e00ff"],
+                },
+                markers: {
+                    size: 7,
+                    colors: ["#6e00ff"],
+                },
+                grid: {
+                    strokeDashArray: 10,
+                },
+                series: [{
+                    name: 'sales per day',
+                    data: [42, 33, 54, 31, 59, 70, 61]
+                }],
+                xaxis: {
+                    categories: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"]
+                }
+            }
 
-        let chartRadial = new ApexCharts(document.querySelector("#emailChart"), optionsRadial);
-        chartRadial.render();
-    </script>
+            var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+            chart.render();
+
+            //Radial Bar Chart
+            let optionsRadial = {
+                series: [50],
+                chart: {
+                    height: 280,
+                    type: 'radialBar',
+                },
+                plotOptions: {
+                    radialBar: {
+                        hollow: {
+                            size: '60%',
+                        },
+                        dataLabels: {
+                            name: {
+                                show: false,
+                            },
+                            value: {
+                                formatter: function(val) {
+                                    return parseInt(val);
+                                },
+                                color: '#777',
+                                fontSize: '40px',
+                                fontWeight: 500,
+                            }
+                        }
+                    },
+                },
+                stroke: {
+                    lineCap: "round",
+                },
+                fill: {
+                    colors: ["#ffb100"]
+                },
+                labels: [""]
+            };
+
+            let chartRadial = new ApexCharts(document.querySelector("#emailChart"), optionsRadial);
+            chartRadial.render();
+        </script>
 
 </body>
 

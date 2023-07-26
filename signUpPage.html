@@ -2,50 +2,65 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Login + Firebase Database</title>
+    <meta charset="utf-8">
+    <title>Login + Firebase Database</title>
 
-  <!-- Cool Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <!-- Cool Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
 
-  <!-- Our stylesheet -->
-  <!--link rel="stylesheet" type="text/css" href="CSS/Login_SignUp.css"-->
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/35e558f012.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+    <div class="container">
+        <div id="content_container">
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header"> Login Sign Up </h2>
+                </div>
 
-  <div id="content_container">
-    <div id="form_container">
-      <div id="form_header_container">
-        <h2 id="form_header"> Login Sign Up </h2>
-      </div>
+                <form>
+                    <div id="form_content_container">
+                        <div class="input-field">
+                            <i class="fa-solid fa-person"></i>
+                            <input type="text" id="full_name" placeholder="Full name">
+                        </div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="password" placeholder="New Password">
+                        </div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-code"></i>
+                            <input type="hawker_code" id='hawker_code' placeholder="Hawker code">
+                        </div>
 
-      <div id="form_content_container">
-        <div id="form_content_inner_container">
-          <input type="text" id="full_name" placeholder="Full name">
-          <input type="email" id="email" placeholder="Email">
-          <input type="password" id="password" placeholder="New Password">
-          <input type="hawker_code" id = 'hawker_code' placeholder= "Hawker code">   
-
-          <div id="button_container">
-            <!--a href="index.html"-->
-              <button id=login>Login</button>
-            </a>
-            <!--a href="index.html"-->
-              <button id="register">Register</button>
-            </a>
-          </div>
-
+                        <div id="button_container">
+                            <!--a href="index.html"-->
+                            <button id=login>Login</button>
+                            </a>
+                            <!--a href="index.html"-->
+                            <button id="register">Register</button>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  
-  <script src="js/LoginSignUp.js" type="module"></script>
+    </div>
+
+    <script src="js/LoginSignUp.js" type="module"></script>
 </body>
 
 
